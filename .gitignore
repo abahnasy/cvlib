@@ -35,3 +35,4 @@
 src/third_party/Eigen
 .vscode/
 *.out.*/
+build*
