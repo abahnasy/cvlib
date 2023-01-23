@@ -1,16 +1,15 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.25)
 
-project(CVLib C CXX)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+# Set the output folder where your program will be created
+# set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+# set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+# set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
-set(THIRD_PARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party CACHE PATH "Path to Third Party folder")
-set(Eigen3_INCLUDE_DIR ${THIRD_PARTY_DIR}/Eigen/ CACHE PATH "Path to Eigen source folder")
 
 
 add_executable(main main.cpp)
-target_include_directories(main PUBLIC ${Eigen3_INCLUDE_DIR})
+target_include_directories(main PUBLIC ${EIGEN_INCLUDE_DIRS})
+
+
 # add_subdirectory(cvlib)
 # add_subdirectory(tests)
